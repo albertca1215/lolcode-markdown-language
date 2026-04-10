@@ -1,0 +1,37 @@
+<lolcode>	::=	#HAI <pre-head> <opt-head> <body> #KBYE
+<body>		::=	<comment> <body> | <paragraph> <body> | 
+			<formatted-text> <body> | <list> <body> | <link> <body> | 
+			<var-declare> <body> | <var-getter> <body> | <newline> | ε
+<comment>	::=	#OBTW <text> #TLDR
+<pre-head>	::=	<comment> <pre-head> | ε
+<opt-head>	::=	<header> | ε
+<header>	::=	'#MAEK HEAD' <head-body> <end-tag>
+<head-body>	::=	<title> <head-body> | ε
+<title>		::=	'#GIMMEH TITLE' <text> <format-end>
+<paragraph>	::=	'#MAEK PARAGRAF' <formatted-text> <end-tag>
+<bold>		::=	'#GIMMEH BOLD' <text> <format-end>
+<italics>	::=	'#GIMMEH ITALICS' <text> <format-end>
+<formatted-text>::=	<text> <formatted-text> | <bold> <formatted-text>| <italics> <formatted-text> | ε
+<list>		::=	'#MAEK LIST' <list-items> <end-tag>
+<list-items>	::=	<get-item> <list-items> | <get-item>
+<get-item>	::=	'#GIMMEH ITEM' <formatted-text> <format-end>
+<link>		::=	'#GIMMEH LINX' <text> <format-end>
+<var-declare>	::=	'#IHAZ' <var-name> '#ITZ' <text> <end-tag>
+<var-getter>	::=	'#LEMMESEE' <var-name> <format-end>
+<var-name>	::=	<letter> <var-name-tail> | <digit> <var-name-tail>
+<var-name-tail>	::=	<letter> <var-name-tail> | <digit> <var-name-tail> | ε
+<newline>	::=	#NEWLINE
+<end-tag>	::=	#MKAY
+<format-end>	::=	#OIC
+<text>		::=	<letter> <text> | <digit> <text> | ' ' <text> | ',' <text> | '.'  <text> | '\''
+			'\"' <text> | ':' <text> | '?' <text> | '!' <text> | '%' <text> | 
+			'/' <text> | '\n' <text> | '\t' <text> | ε
+<letter>	::=	A..Z | a..z
+<digit>		::=	0..9
+
+
+GPT Discussions:
+https://chatgpt.com/share/69c0ad2d-1b84-8008-aa85-b1a4639853c5
+https://chatgpt.com/share/69c0ad5b-e03c-8008-8fd7-f88e40871e96
+https://chatgpt.com/share/69c0aa5f-48f0-8005-b789-31fb2770e4da
+https://chatgpt.com/share/69c0ace2-76cc-8005-a679-d4ddaf38ec86
