@@ -402,7 +402,7 @@ impl<'a> Parser<'a> {
             || self.lexer.is_a_lemmesee(&self.compiler.current_token())
     }
 
-    /// Helper: Accumulate consecutive TEXT tokens into a single string
+    // New function to accumulate consecutive TEXT tokens into a single String, which is used for the content of titles, comments, and formatted text.
     fn accumulate_text(&mut self) -> String {
         let mut accumulated = String::new();
         
@@ -1101,7 +1101,7 @@ fn open_in_browser(file: &str) {
 /// for converting LOLCODE markers into their HTML counterparts.
 #[derive(Clone, Debug)]
 pub enum ASTNode {
-    /// Root document node
+    /// This enum represents the different types of nodes that can appear in the AST, and each node corresponds to a different LOLCODE element that can be converted to HTML.
     Document {
         head: Box<ASTNode>,
         body: Vec<ASTNode>,
@@ -1133,7 +1133,7 @@ pub enum ASTNode {
 }
 
 impl ASTNode {
-    /// Convert AST to HTML string
+    /// Converts through the contents of the AST and translates LOLCODE markers into their respective HTML tags. (Thank Copilot for knowing more HTML than I do.)
     pub fn to_html(&self) -> String {
         match self {
             ASTNode::Document { head, body } => {

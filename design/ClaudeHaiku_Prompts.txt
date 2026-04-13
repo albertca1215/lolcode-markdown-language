@@ -1,8 +1,8 @@
-As mentioned in the main.rs file, a significant portion of Phase 2 of the project, which involved the implementation of the LOLCODE design into Rust, was done with the assistance of GitHub CoPilot,
+As mentioned in the main.rs file, a significant portion of Phase 2 of the project, which involved the implementation of the LOLCODE design into Rust, was done with the assistance of GitHub Copilot,
 specifically using the Claude Haiku LLM. The creation of the Lexical and Syntax analyzers were done over the span of 3 days (4/9-4/12), and involved three seperate chats, the latter of which is included
 in raw transcript form at the bottom of this document. The seperate chats were a necessity due to having (shamelessly) reached certain chat limitations, and eventually having to switch to a secondary GitHub
 account with a fresh uses. Unfortunately (in my infinite wisdom), in my attempt to store the chats for safekeeping to include in this documentation, the button that said "Archive" was apparently just a
-fancy way for CoPilot to say "Delete" (which seems obvious now, as the keyboard shortcut to do so is the Del key). Sadly, this means that I do not have the first two CoPilot chats at hand. However, I can list
+fancy way for Copilot to say "Delete" (which seems obvious now, as the keyboard shortcut to do so is the Del key). Sadly, this means that I do not have the first two Copilot chats at hand. However, I can list
 precisely what elements of my code were AI-generated prior to this mishap:
 
 
